@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ExercisesVC-->
+        <scene sceneID="Mg4-gK-jyu">
+            <objects>
+                <viewController storyboardIdentifier="ExercisesVC" id="cuv-pP-Zam" customClass="ExercisesVC" customModule="VertiPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOJ-42-kki" customClass="ARSCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-VW-6jt">
+                                <rect key="frame" x="177.66666666666666" y="396" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="OGS-xJ-GHa"/>
+                                    <constraint firstAttribute="height" constant="20" id="wXN-Xo-f58"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" sceneName="leftArrow" translatesAutoresizingMaskIntoConstraints="NO" id="CDL-ja-och">
+                                <rect key="frame" x="16" y="356" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98365074399999997" green="0.77259290219999999" blue="0.0086221909149999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </arscnView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" sceneName="bottomArrow" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-Ua-3a7">
+                                <rect key="frame" x="137" y="516" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98365074399999997" green="0.77259290219999999" blue="0.0086221909149999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </arscnView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" sceneName="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="BUm-c3-pJX">
+                                <rect key="frame" x="259" y="356" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98365074399999997" green="0.77259290219999999" blue="0.0086221909149999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </arscnView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" sceneName="topArrow" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-nC-OVJ">
+                                <rect key="frame" x="137" y="180" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98365074399999997" green="0.77259290219999999" blue="0.0086221909149999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VDI-VW-6jt" firstAttribute="centerX" secondItem="cOJ-42-kki" secondAttribute="centerX" id="QTb-bT-jTk"/>
+                            <constraint firstItem="VDI-VW-6jt" firstAttribute="centerY" secondItem="cOJ-42-kki" secondAttribute="centerY" id="mmV-mf-vxY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dC2-s3-KzY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomArrow" destination="nCI-Ua-3a7" id="zBj-Iz-fBr"/>
+                        <outlet property="dotLabel" destination="VDI-VW-6jt" id="Ub2-0T-fdc"/>
+                        <outlet property="leftArrow" destination="CDL-ja-och" id="AaK-r7-L4m"/>
+                        <outlet property="rightArrow" destination="BUm-c3-pJX" id="G7S-Gz-CIQ"/>
+                        <outlet property="sceneView" destination="cOJ-42-kki" id="dNr-ON-3gu"/>
+                        <outlet property="topArrow" destination="QQO-nC-OVJ" id="xQT-gL-FXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQc-hI-bH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+</document>
