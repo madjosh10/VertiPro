@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import SceneKit
 
 class ExercisesVC: UIViewController {
 
@@ -21,20 +22,34 @@ class ExercisesVC: UIViewController {
     @IBOutlet weak var dotLabel: UILabel!
     
     
+    var leftArrowNode: SCNNode?
+    var rightArrowNode: SCNNode?
+    var topArrowNode: SCNNode?
+    var bottomArrowNode: SCNNode?
+    
     var dataFromSelection: String = ""
     var choseMovement: Int?
     
+    //MARK:- viewDidLoad() that holds information on the arrow SCNNODES
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneView.delegate = self
+        
+        topArrow.isHidden = true
+        bottomArrow.isHidden = true
+        leftArrow.isHidden = true
+        rightArrow.isHidden = true
+        
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
-        sceneView.delegate = self
         
         dotLabel.layer.masksToBounds = true
         dotLabel.layer.cornerRadius = 10
         
-        startingExercise(movement: choseMovement ?? 3)
+        startingExercise(movement: choseMovement!)
         
     }
     

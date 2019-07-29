@@ -8,10 +8,12 @@
 
 import UIKit
 import ARKit
+import Firebase
 
 class MainVC: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,18 @@ class MainVC: UIViewController {
             present(walkThroughVC, animated: true, completion: nil)
             
         }
+        
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+                   if user == nil {
+                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                       let loginVC = storyboard.instantiateViewController(withIdentifier: "MainVC")
+                       self.present(loginVC, animated: true, completion: nil)
+                       
+                   } else {
+//                       self.setListener()
+                       
+                   }
+               })
         
     }
     

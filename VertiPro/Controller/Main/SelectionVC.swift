@@ -36,7 +36,7 @@ class SelectionVC: UIViewController {
         let destVC: ExercisesVC = segue.destination as! ExercisesVC
         
         destVC.dataFromSelection = "\n*****DATA PASSED WORKING AS EXPECTED****\n"
-        destVC.choseMovement = Int(movementSegmentControl.selectedSegmentIndex)
+        destVC.choseMovement = movementSegmentControl.selectedSegmentIndex
         
         
     }
